@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>OSAKAN - CONTACTO</title>
+</head>
+<body>
+
+<!--BARRA DE NAVEGACION-->
+    <header>
+  <nav class="nav_principal">
+    <div class="nav_logo">
+      <a href="/index.html"><img src="/assets/img/logo-sombra.svg" alt="Logo de Osakan"></a>
+    </div>
+    <ul class="nav_centro">
+      <li><a href="/assets/pages/flota.html">Flota</a></li>
+      <li><a href="/assets/pages/destinos.html">Destinos</a></li>
+      <li><a href="/assets/pages/nosotros.html">Nosotros</a></li>
+    </ul>
+    <div class="nav_contacto">
+      <a href="/assets/pages/contacto.html" class="btn-contacto">Contacto</a>
+    </div>
+  </nav>
+</header>
+
+
+<!--FORMULARIO-->
+<section class="formulario-contacto">
+  <h1 class="titulo-contacto">Contactate con nosotros</h1>
+  <h2 class="subtitulo-contacto">Enviá tu consulta a nuestros agentes</h2>
+
+  <div class="formulario-imagen-wrap">
+    <!-- Caja del formulario -->
+    <form class="formulario">
+      <div class="form-columna">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" name="apellido" required>
+
+        <label>Sexo</label>
+        <div class="sexo-opciones">
+          <label><input type="radio" name="sexo" value="M"> M</label>
+          <label><input type="radio" name="sexo" value="F"> F</label>
+          <label><input type="radio" name="sexo" value="ND"> Prefiero no decir</label>
+        </div>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" required>
+      </div>
+
+      <div class="form-columna">
+        <label for="pais">País de residencia</label>
+        <select id="pais" name="pais" required>
+          <option value="">Seleccioná una opción</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Uruguay">Uruguay</option>
+          <option value="Chile">Chile</option>
+          <option value="Bolivia">Bolivia</option>
+          <option value="Perú">Perú</option>
+          <option value="Paraguay">Paraguay</option>
+          <option value="México">México</option>
+          <option value="Otro">Otro</option>
+        </select>
+
+        <label for="consulta">Dejá tu consulta</label>
+        <textarea id="consulta" name="consulta" rows="5"></textarea>
+
+        <div class="check-novedades">
+          <label>
+            <input type="checkbox" name="novedades">
+            Suscribite a novedades
+          </label>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar</button>
+      </div>
+    </form>
+
+    <!-- Imagen decorativa separada -->
+    <div class="formulario-imagen-lateral">
+      <img src="/assets/img/img_formulario.png" alt="Imagen decorativa formulario">
+    </div>
+  </div>
+</section>
+
+
+<!--FOOTER-->
+    <footer>
+    <nav class="footer-nav">
+        <div class="social-iconos">
+            <a href="https://www.instagram.com/" target="_blank">
+            <img src="/assets/img/redes_ig.svg" alt="Instagram" />
+            </a>
+            <a href="https://x.com/" target="_blank">
+            <img src="/assets/img/redes_x.svg" alt="X" />
+            </a>
+            <a href="https://www.facebook.com/" target="_blank">
+            <img src="/assets/img/redes_fb.svg" alt="Facebook" />
+            </a>
+        </div>
+        <p class="copyright"> © 2025 Osakan Cruise Line. Todos los derechos reservados.</p>
+        <p class="legal-text"> Este sitio web fue desarrollado por <span class="bold">Gonzalo Raschella</span> como parte de un proyecto académico. El contenido, imágenes y descripciones utilizadas tienen fines ilustrativos y no corresponden a una empresa real. Cualquier similitud con nombres, marcas o servicios existentes es pura coincidencia.</p>
+    </nav>
+    </footer>
+
+</body>
+</html>
