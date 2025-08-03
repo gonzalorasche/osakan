@@ -436,3 +436,19 @@ textarea {
   border-radius: 12px;
 }
 
+/* Estilo del contenedor del carrusel */
+.carousel-container {
+  max-width: 800px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  color: #1d454c;
+  box-sizing: border-box;
+}
+
+.carousel-inner img {
+  border-radius: 12px;
+}
