@@ -1,57 +1,51 @@
-/* AJUSTES PARA EL NAV PRINCIPAL */
-/* Fondo */
-.nav_principal {
-    background-color: #1d454c;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
-    height: 35px;
-    color: #f5f0cd;
+/*  NAVBAR FONDO */
+.bg-osakan {
+    background-color: #1d454c; /* Fondo personalizado */
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+/* TIPOGRAFÍA GENERAL PARA LINKS */
+.osakan-link {
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    /* Inter Medium */
-    font-size: 16px;
-}
-
-/* Tamaño logo */
-.nav_logo img {
-    height: 50px;
-}
-
-
-.nav_centro {
-    list-style: none;
-    display: flex;
-    gap: 40px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav_centro li a {
-    text-decoration: none;
+    font-size: 12px;
     color: #f5f0cd;
-}
+    text-decoration: none;
+    transition: color 0.3s ease;
+    }
 
-.nav_centro li a:hover{
+/* HOVER PARA LINKS */
+    .osakan-link:hover {
     color: #f4da42;
 }
 
-/* Fondo boton */
-.nav_contacto .btn-contacto {
-    background: none;
-    border: 2px solid #f5f0cd;
+/* BOTÓN CONTACTO */
+.osakan-btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
     color: #f5f0cd;
-    padding: 8px 16px;
-    border-radius: 5px;
+    border: 2px solid #f5f0cd;
+    background-color: transparent;
+    padding: 0.4rem 1rem;
+    transition: all 0.3s ease;
     text-decoration: none;
-    transition: 0.3s ease;
 }
 
-/* Efecto boton contacto al pasar el raton */
-.nav_contacto .btn-contacto:hover {
+/* HOVER PARA BOTÓN CONTACTO */
+.osakan-btn:hover {
     background-color: #f5f0cd;
-    color: #1d454c;
+  color: #1d454c;
+}
+
+.navbar .d-flex {
+    padding-right: 10px; /* Ajustable según el navegador */
 }
 
 /* AJUSTES PARA EL FOOTER */
@@ -59,10 +53,10 @@ footer {
     width: 100%;
     padding: 20px 10px 40px;
     box-sizing: border-box;
-  }
+}
 
 /* General del footer */
-  .footer-nav {
+.footer-nav {
     text-align: center;
     color: #1d454c;
     font-family: 'Inter', sans-serif;
@@ -70,13 +64,13 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 12px;
-  }
+}
 /* Alineación iconos redes */
-  .social-iconos {
+.social-iconos {
     display: flex;
     justify-content: center;
     gap: 25px;
-  }
+}
 
   .social-iconos {
     background: none;
@@ -122,6 +116,7 @@ footer {
     align-items: center;
     justify-content: flex-start;
     padding: 0 60px;
+    padding-top: 20px;
     box-sizing: border-box;
 }
 
@@ -172,28 +167,7 @@ footer {
 }
 
 .btn-contacto:hover {
-      background-color: #f0cc20;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 40px 20px;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    background-color: #ffffff;
-    margin: 0;
-    padding: 40px 0;
-}
-
-body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
+    background-color: #f0cc20;
 }
 
 /* FORMULARIO */
@@ -342,11 +316,77 @@ textarea {
 }
 
 
-/*NUEVO CRUCERO INDEX*/
-/* Caja principal de la sección */
-.seccion-crucero {
-    max-width: 800px;
+/* ================================
+   GRID PRINCIPAL EN TRES COLUMNAS
+   ================================ */
+
+.osakan-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 40px; /* Espacio entre columnas */
+    max-width: 2400px;
     margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    align-items: flex-start; /* Alinea todos los hijos arriba */
+}
+
+/* Responsivo: apila las columnas en pantallas pequeñas */
+@media (max-width: 992px) {
+    .osakan-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ================================
+   TIPOGRAFÍA DE TÍTULOS
+   ================================ */
+
+.osakan-grid h2,
+.seccion-crucero h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1d454c;
+}
+
+.osakan-grid h3,
+.seccion-crucero h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #f4da42;
+}
+
+/* ================================
+   SECCIÓN CAROUSEL
+   ================================ */
+
+.carousel-container {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    color: #1d454c;
+    box-sizing: border-box;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+    align-self: flex-start;
+}
+
+.carousel-inner img {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ================================
+   SECCIÓN NUEVO CRUCERO
+   ================================ */
+
+.seccion-crucero {
     background-color: #ffffff;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
@@ -356,21 +396,6 @@ textarea {
     box-sizing: border-box;
 }
 
-/* Título */
-.seccion-crucero h2 {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 16px;
-}
-
-.seccion-crucero h3 {
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 16px;
-    color: #f4da42;
-}
-
-/* Imagen */
 .imagen-crucero img {
     width: 100%;
     height: auto;
@@ -379,14 +404,12 @@ textarea {
     margin-bottom: 16px;
 }
 
-/* Texto descriptivo */
 .descripcion-crucero {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 20px;
 }
 
-/* Botón alineado a la derecha */
 .boton-vermas {
     text-align: right;
 }
@@ -405,27 +428,26 @@ textarea {
     background-color: #e3c933;
 }
 
-/* CONTENEDOR VIDEO */
+/* ================================
+   SECCIÓN VIDEO
+   ================================ */
+
 .video_index {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
     background-color: #ffffff;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
     box-sizing: border-box;
 }
 
-/* Contenedor del iframe con proporción 16:9 */
 .video_index_div {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 */
+    padding-bottom: 56.25%; /* Proporción 16:9 */
     height: 0;
     overflow: hidden;
     border-radius: 12px;
 }
 
-/* Estilos para el iframe */
 .video_iframe {
     position: absolute;
     top: 0;
@@ -436,19 +458,53 @@ textarea {
     border-radius: 12px;
 }
 
-/* Estilo del contenedor del carrusel */
-.carousel-container {
-    max-width: 800px;
-    margin: 40px auto;
-    background-color: #ffffff;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    font-family: 'Inter', sans-serif;
-    color: #1d454c;
-    box-sizing: border-box;
+/* ================================
+   CONTENEDOR FLEX ADICIONAL (opcional)
+   ================================ */
+
+.contenedor-principal {
+    display: flex;
+    align-items: flex-start;
 }
 
-.carousel-inner img {
-    border-radius: 12px;
+.osakan-grid > * {
+  min-height: 500px; /* Ajustá según tu diseño */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.carousel-container {
+  height: 400px; /* Igual que la imagen y el iframe */
+  overflow: hidden; /* Evita que el contenido se desborde */
+  display: flex;
+  align-items: center; /* Centra verticalmente si es necesario */
+}
+
+.carousel-inner,
+.carousel-item {
+  height: 100%;
+}
+
+.barco-img {
+  height: 400px;
+  object-fit: cover; /* Mantiene proporción sin deformar */
+}
+
+.video-frame {
+  height: 400px;
+  width: 100%;
+}
+
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* ============================================
+   AJUSTE PARA COMPENSAR LA NAVBAR FIJA
+   ============================================ */
+body {
+    padding-top: 50px; /* Compensa la altura de .bg-osakan */
 }
