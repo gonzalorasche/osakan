@@ -488,3 +488,34 @@ textarea {
 body {
     padding-top: 50px; /* Compensa la altura de .bg-osakan */
 }
+
+.destino_card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    color: #1d454c;
+    box-sizing: border-box;
+    height: 100%;
+}
+.destino_card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.destino_card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1d454c;
+}
+
+.section_destinos h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #1d454c;
+    text-align: left;
+}
