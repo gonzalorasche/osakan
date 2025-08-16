@@ -8,6 +8,7 @@ $color-blanco: #ffffff;         // Fondos, formularios
 $color-negro-sombra: rgba(0,0,0,0.08);
 $color-negro-sombra-fuerte: rgba(0,0,0,0.1);
 
+
 // FONDO NAVBAR
 .bg-osakan {
   background-color: $color-primario;
@@ -55,52 +56,69 @@ $color-negro-sombra-fuerte: rgba(0,0,0,0.1);
   padding-right: 10px;
 }
 
-/* Ícono hamburguesa personalizado */
-.navbar-toggler {
+// MENU HAMBURGUESA PERSONALIZADO
+.navbar-toggler.custom-icon {
   border: none;
-  background: none;
-  padding: 0.25rem 0.75rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: url('/assets/img/icono_menu_hamb.png') no-repeat center center;
+  background-size: 30px 30px; // tamaño de la imagen del menú
+  width: 50px;
+  height: 50px;
 
-  span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: $color-acento; // amarillo
-    margin: 4px 0;
-    border-radius: 2px;
-    transition: all 0.3s ease;
+  span { // ocultamos las barras internas
+    display: none;
   }
 }
 
-/* Menú desplegado */
-.navbar-collapse {
-  background-color: $color-blanco; // fondo blanco al abrir
+// FONDO LISTA DESPLEGABLE EN MOBILE
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: $color-primario; // fondo del menú desplegable
+  }
 
-  .nav-link {
-    color: $color-primario;       // links en #1d454c
-    font-weight: 700;             // negrita
-    font-family: 'Inter', sans-serif;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s;
+  .navbar-nav .nav-link {
+    color: $color-secundario;
 
     &:hover {
-      color: $color-acento;       // hover amarillo
+      color: $color-acento;
     }
   }
 }
 
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: $color-primario;
+    position: absolute; 
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0; // agrega espacio arriba y abajo
+    z-index: 999;
+  }
 
+  .navbar-nav {
+    margin: 0;
+    width: 100%;
+  }
 
-// FOOTER
-footer {
-  width: 100%;
-  padding: 20px 10px 40px;
-  box-sizing: border-box;
+  .navbar-nav .nav-item {
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 1rem 1rem; // espacio interno horizontal
+  }
+
+  .d-flex { 
+    justify-content: left; // centra el botón
+    padding: 1rem 2rem; // separa del borde
+  }
 }
+
+
+//FOOTER
 
 .footer-nav {
   text-align: center;
@@ -530,3 +548,110 @@ body {
   color: $color-primario;
   text-align: left;
 }
+
+// ESTILOS SECCIÓN FLOTA
+
+.titulo-flota {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1d454c; // h1
+  margin: 0;
+  text-align: left;
+
+  @media (max-width: 992px) {
+    font-size: 55px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 40px;
+  }
+}
+
+.subtitulo-flota {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0 15px;
+  color: #f4da42; // h2
+  text-align: left;
+
+  @media (max-width: 992px) {
+    font-size: 25px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 20px;
+  }
+}
+
+.lista-flota {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+
+.tarjeta-flota {
+  background-color: #fff; // siempre blanco
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  img {
+    border-radius: 15px 0 0 15px;
+    object-fit: cover;
+
+    @media (max-width: 992px) {
+      border-radius: 15px 15px 0 0;
+    }
+  }
+
+  .nombre-barco {
+    font-size: 30px;
+    font-weight: 700;
+    color: #1d454c; // h1/h2
+    margin-bottom: 10px;
+
+    @media (max-width: 576px) {
+      font-size: 22px;
+    }
+  }
+
+  .capacidad-barco {
+    font-size: 20px;
+    font-weight: 500;
+    color: #f4da42; // h3
+    margin-bottom: 15px;
+
+    @media (max-width: 576px) {
+      font-size: 16px;
+    }
+  }
+
+  .descripcion-barco {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1d454c; // p
+
+    @media (max-width: 576px) {
+      font-size: 14px;
+    }
+  }
+}
+
+// TARJETA DESTACADA (la primera, OSAKAN ETERNITY)
+.tarjeta-destacada {
+  border: 3px solid transparent;
+
+  &:hover {
+    border: 3px solid #f4da42; // borde amarillo solo en hover
+  }
+}
+
