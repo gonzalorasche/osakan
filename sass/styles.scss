@@ -1,0 +1,532 @@
+// VARIABLES DE COLOR
+$color-primario: #1d454c;       // Fondo navbar, textos principales
+$color-secundario: #f5f0cd;     // Textos claros, botones
+$color-acento: #f4da42;         // Hover, subtítulos, beneficios
+$color-boton-hover: #f0cc20;    // Hover botón contacto amarillo fuerte
+$color-boton-vermas-hover: #e3c933; // Hover botón ver más
+$color-blanco: #ffffff;         // Fondos, formularios
+$color-negro-sombra: rgba(0,0,0,0.08);
+$color-negro-sombra-fuerte: rgba(0,0,0,0.1);
+
+// FONDO NAVBAR
+.bg-osakan {
+  background-color: $color-primario;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+// LINKS
+.osakan-link {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: $color-secundario;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $color-acento;
+  }
+}
+
+// BOTON CONTACTO
+.osakan-btn {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: $color-secundario;
+  border: 2px solid $color-secundario;
+  background-color: transparent;
+  padding: 0.4rem 1rem;
+  transition: all 0.3s ease;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $color-secundario;
+    color: $color-primario;
+  }
+}
+
+.navbar .d-flex {
+  padding-right: 10px;
+}
+
+/* Ícono hamburguesa personalizado */
+.navbar-toggler {
+  border: none;
+  background: none;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: $color-acento; // amarillo
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+}
+
+/* Menú desplegado */
+.navbar-collapse {
+  background-color: $color-blanco; // fondo blanco al abrir
+
+  .nav-link {
+    color: $color-primario;       // links en #1d454c
+    font-weight: 700;             // negrita
+    font-family: 'Inter', sans-serif;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $color-acento;       // hover amarillo
+    }
+  }
+}
+
+
+
+// FOOTER
+footer {
+  width: 100%;
+  padding: 20px 10px 40px;
+  box-sizing: border-box;
+}
+
+.footer-nav {
+  text-align: center;
+  color: $color-primario;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-iconos {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+
+  img {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+}
+
+.copyright {
+  font-weight: 500;
+  font-size: 10px;
+  margin: 0;
+}
+
+.legal-text {
+  font-weight: 300;
+  font-size: 10px;
+  margin: 0 15px;
+  max-width: 600px;
+
+  .bold {
+    font-weight: 700;
+  }
+}
+
+// HERO SECTION
+.hero-section {
+  background-image: url('../assets/img/img_hero_section.webp');
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 60px;
+  padding-top: 20px;
+  box-sizing: border-box;
+
+  .hero-content {
+    text-align: left;
+    color: $color-secundario;
+    max-width: 400px;
+    font-family: 'Inter', sans-serif;
+
+    h1 {
+      font-size: 80px;
+      font-weight: 900;
+      color: $color-acento;
+      margin: 0;
+    }
+
+    .subtitulo {
+      font-size: 35px;
+      font-weight: 400;
+      margin: 10px 0 15px;
+      color: $color-secundario;
+    }
+
+    .beneficios {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+
+      li {
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-acento;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}
+
+.btn-contacto {
+  display: inline-block;
+  background-color: $color-acento;
+  color: $color-primario;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+
+  &:hover {
+    background-color: $color-boton-hover;
+  }
+}
+
+// FORMULARIO
+.formulario-contacto {
+  padding: 40px 40px 0 40px;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.titulo-contacto {
+  font-size: 28px;
+  font-weight: 900;
+  color: $color-primario;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.subtitulo-contacto {
+  font-size: 20px;
+  font-weight: 900;
+  color: $color-acento;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.formulario-imagen-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  gap: 30px;
+}
+
+.formulario {
+  width: 50%;
+  background-color: $color-blanco;
+  border-radius: 12px;
+  box-shadow: 0 0 20px $color-negro-sombra;
+  padding: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+
+  .form-columna {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+}
+
+label {
+  font-size: 14px;
+  font-weight: 500;
+  color: $color-primario;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  display: block;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select, textarea {
+  width: 100%;
+  border: 1px solid $color-primario;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  box-sizing: border-box;
+  resize: none;
+  color: $color-primario;
+  background-color: $color-blanco;
+}
+
+textarea {
+  font-size: 14px;
+}
+
+.sexo-opciones {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+
+  label {
+    font-size: 14px;
+    font-weight: 400;
+    color: $color-primario;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.check-novedades {
+  margin-top: 20px;
+
+  label {
+    font-size: 10px;
+    font-weight: 400;
+    color: $color-primario;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.btn-enviar {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: $color-acento;
+  background-color: transparent;
+  border: 1px solid $color-acento;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease, color 0.3s ease;
+
+  &:hover {
+    background-color: $color-acento;
+    color: $color-primario;
+  }
+}
+
+// IMAGEN FORMULARIO
+.formulario-imagen-lateral {
+  width: 50%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px $color-negro-sombra;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+  }
+}
+
+// GRID 3 COLUMNAS
+.osakan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 2400px;
+  margin: 40px auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  align-items: flex-start;
+
+  > * {
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: $color-primario;
+  }
+
+  h3 {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: $color-acento;
+  }
+}
+
+// RESPONSIVE
+@media (max-width: 992px) {
+  .osakan-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+// CAROUSEL
+.carousel-container {
+  background-color: $color-blanco;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px $color-negro-sombra-fuerte;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  color: $color-primario;
+  box-sizing: border-box;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  align-self: flex-start;
+  height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  .carousel-inner, .carousel-item {
+    height: 100%;
+  }
+
+  img {
+    border-radius: 12px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+// SECCION NUEVO CRUCERO
+.seccion-crucero {
+  background-color: $color-blanco;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px $color-negro-sombra-fuerte;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  color: $color-primario;
+  box-sizing: border-box;
+
+  .imagen-crucero img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .descripcion-crucero {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+
+  .boton-vermas {
+    text-align: right;
+
+    a {
+      background-color: $color-acento;
+      color: $color-primario;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: $color-boton-vermas-hover;
+      }
+    }
+  }
+}
+
+// SECCION IFRAME
+.video_index {
+  background-color: $color-blanco;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px $color-negro-sombra-fuerte;
+  padding: 20px;
+  box-sizing: border-box;
+
+  .video_index_div {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px;
+
+    .video_iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 12px;
+    }
+  }
+
+  .video-frame {
+    height: 400px;
+    width: 100%;
+  }
+}
+
+// COMPENSAR NAV STICKY
+body {
+  padding-top: 50px;
+}
+
+// DESTINOS
+.destino_card {
+  background-color: $color-blanco;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px $color-negro-sombra-fuerte;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  color: $color-primario;
+  box-sizing: border-box;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: $color-primario;
+  }
+}
+
+.section_destinos h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: $color-primario;
+  text-align: left;
+}

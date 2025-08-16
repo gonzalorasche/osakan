@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -42,8 +42,110 @@
         </nav>
     </header>
 
-    <h1>NOSOTROS "PROXIMAMENTE"</h1>
-    <p>En esta pagina habra un poco de historia y fotos de la linea de cruceros y preguntas frecuentes</p>
+        <main class="seccion-nosotros py-5">
+    <div class="container">
+
+        <!-- ENCABEZADO -->
+        <header class="mb-5 text-center">
+        <h1 class="titulo-nosotros">Conocé nuestra Historia</h1>
+        <p class="subtitulo-nosotros">Más de una década navegando juntos hacia nuevos horizontes</p>
+        </header>
+
+        <!-- SECCIÓN 1: HISTORIA -->
+        <section class="bloque-nosotros d-flex flex-wrap align-items-center mb-5">
+        <div class="texto-nosotros flex-fill p-3">
+            <h2 class="subtitulo-seccion">Nuestra Trayectoria</h2>
+            <p>
+            OSAKAN Cruise Line nació con la visión de conectar a las personas con el mar y los destinos más fascinantes del planeta. 
+            Desde nuestro primer viaje en 2010, hemos crecido hasta convertirnos en una compañía reconocida por su innovación, 
+            servicio de calidad y experiencias inolvidables. Nuestros barcos han navegado miles de millas, llevando a bordo a pasajeros 
+            de todo el mundo que confían en nosotros para vivir momentos únicos.
+            </p>
+        </div>
+        <div class="imagenes-nosotros d-flex flex-wrap gap-3 justify-content-center p-3">
+            <img src="../img/primer_crucero_nosotros.png" alt="Primer crucero de Osakan" class="img-fluid rounded-3 historia-img">
+            <img src="../img/white_party_nosotros.png" alt="Pasajeros disfrutando" class="img-fluid rounded-3 historia-img">
+        </div>
+        </section>
+
+        <!-- SECCIÓN 2: SUSTENTABILIDAD -->
+        <section class="bloque-nosotros d-flex flex-wrap align-items-center mb-5 flex-row-reverse">
+        <div class="texto-nosotros flex-fill p-3">
+            <h2 class="subtitulo-seccion">Compromiso con el Futuro</h2>
+            <p>
+            En OSAKAN Cruise Line creemos que el mar es nuestro hogar compartido. 
+            Por eso invertimos en tecnologías limpias, sistemas de reducción de emisiones y prácticas responsables 
+            para minimizar nuestro impacto ambiental. Desde el uso de energías más eficientes hasta la reducción del plástico 
+            a bordo, cada decisión apunta a garantizar que las generaciones futuras puedan seguir disfrutando de los océanos.
+            </p>
+        </div>
+        <div class="imagenes-nosotros d-flex flex-wrap gap-3 justify-content-center p-3">
+            <img src="../img/paneles_nosotros.png" alt="Paneles solares en crucero" class="img-fluid rounded-3 sustentable-img">
+            <img src="../img/mar_limpio_nosotros.png" alt="Mar limpio y azul" class="img-fluid rounded-3 sustentable-img">
+        </div>
+        </section>
+
+        <!-- SECCIÓN 3: FAQ -->
+        <section class="faq-nosotros">
+        <h2 class="subtitulo-seccion text-center mb-4">Preguntas Frecuentes</h2>
+        <div class="lista-faq d-flex flex-column gap-3">
+
+            <details>
+            <summary>¿Qué incluye el precio de un crucero?</summary>
+            <p>El precio incluye alojamiento, comidas en restaurantes principales, entretenimiento y acceso a áreas comunes.</p>
+            </details>
+
+            <details>
+            <summary>¿Necesito pasaporte para embarcar?</summary>
+            <p>Sí, en la mayoría de los itinerarios internacionales es obligatorio contar con pasaporte vigente.</p>
+            </details>
+
+            <details>
+            <summary>¿Hay actividades para niños?</summary>
+            <p>Contamos con clubes infantiles, áreas de juegos y actividades especialmente diseñadas para niños y adolescentes.</p>
+            </details>
+
+            <details>
+            <summary>¿Se puede viajar solo?</summary>
+            <p>Sí, ofrecemos cabinas individuales y actividades para que los viajeros solos también disfruten la experiencia.</p>
+            </details>
+
+            <details>
+            <summary>¿Qué opciones de comida hay?</summary>
+            <p>Disponemos de menús internacionales, opciones vegetarianas, veganas y para personas con restricciones alimenticias.</p>
+            </details>
+
+            <details>
+            <summary>¿Puedo llevar mi mascota?</summary>
+            <p>Por razones de higiene y seguridad no está permitido llevar mascotas, salvo perros de asistencia certificados.</p>
+            </details>
+
+            <details>
+            <summary>¿Hay atención médica a bordo?</summary>
+            <p>Sí, todos nuestros barcos cuentan con centro médico equipado y personal de guardia las 24 horas.</p>
+            </details>
+
+            <details>
+            <summary>¿Se necesita seguro de viaje?</summary>
+            <p>No es obligatorio, pero recomendamos contratarlo para mayor tranquilidad durante el crucero.</p>
+            </details>
+
+            <details>
+            <summary>¿Qué ropa debo llevar?</summary>
+            <p>Ropa cómoda para el día, traje de baño, y al menos un conjunto elegante para cenas formales.</p>
+            </details>
+
+            <details>
+            <summary>¿Qué medidas de sustentabilidad tienen a bordo?</summary>
+            <p>Reducimos plásticos, usamos sistemas de tratamiento de agua, iluminación LED y energías más limpias.</p>
+            </details>
+
+        </div>
+        </section>
+
+    </div>
+    </main>
+
 
 <!--FOOTER-->
     <footer>
