@@ -4,7 +4,7 @@ $color-secundario: #f5f0cd;     // Textos claros, botones
 $color-acento: #f4da42;         // Hover, subtítulos, beneficios
 $color-boton-hover: #f0cc20;    // Hover botón contacto amarillo fuerte
 $color-boton-vermas-hover: #e3c933; // Hover botón ver más
-$color-blanco: #ffffff;         // Fondos, formularios
+$color-blanco: #ffffff;         // Fondos
 $color-negro-sombra: rgba(0,0,0,0.08);
 $color-negro-sombra-fuerte: rgba(0,0,0,0.1);
 
@@ -56,15 +56,20 @@ $color-negro-sombra-fuerte: rgba(0,0,0,0.1);
   padding-right: 10px;
 }
 
+.navbar-toggler {
+  display: flex;
+  align-items: center;
+}
+
 // MENU HAMBURGUESA PERSONALIZADO
 .navbar-toggler.custom-icon {
   border: none;
-  background: url('../assets/img/icono_menu_hamb.png') no-repeat center center;
-  background-size: 30px 30px; // tamaño de la imagen del menú
+  background: url('/assets/img/icono_menu_hamb.png') no-repeat center center;
+  background-size: 30px 30px; // 
   width: 50px;
   height: 50px;
 
-  span { // ocultamos las barras internas
+  span { // 
     display: none;
   }
 }
@@ -91,7 +96,7 @@ $color-negro-sombra-fuerte: rgba(0,0,0,0.1);
     top: 50px;
     left: 0;
     width: 100%;
-    padding: 1rem 0; // agrega espacio arriba y abajo
+    padding: 1rem 0; // 
     z-index: 999;
   }
 
@@ -409,32 +414,33 @@ textarea {
 
 // CAROUSEL
 .carousel-container {
-  background-color: $color-blanco;
   border-radius: 16px;
+  overflow: hidden;             
   box-shadow: 0 8px 20px $color-negro-sombra-fuerte;
-  padding: 20px;
-  font-family: 'Inter', sans-serif;
-  color: $color-primario;
-  box-sizing: border-box;
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-  align-self: flex-start;
-  height: 400px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
+  height: auto;                 
+  background-color: $color-blanco;
+  padding: 0;
 
-  .carousel-inner, .carousel-item {
-    height: 100%;
+  .carousel-inner {
+    border-radius: 12px;         
+    overflow: hidden;
+  }
+
+  .carousel-item {
+    border-radius: 12px;
+    overflow: hidden;
   }
 
   img {
-    border-radius: 12px;
     width: 100%;
     height: auto;
     object-fit: cover;
+    display: block;
+    border-radius: inherit;
   }
 }
+
+
 
 // SECCION NUEVO CRUCERO
 .seccion-crucero {
